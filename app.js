@@ -36,15 +36,15 @@ app.get('/api/books', function(req,res){
 		res.json(books); //server response in json -> books
 	});
 });
-/*
-app.get('/api/book/:id', function(req,res){
-	Book.getBook(function (err, book) {
+
+app.get('/api/books/:_id', function(req,res){
+	Book.getBook(req.params._id, function (err, book) {
 		if(err){
 			throw err;
 		}
 		res.json(book); //server response in json -> books
 	});
-});*/
+});
 
 
 app.listen(3000);

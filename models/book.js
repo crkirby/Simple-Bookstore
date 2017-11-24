@@ -44,5 +44,8 @@ module.exports.getBooks = function (callback,limit) {
 	Book.find(callback).limit(limit);
 }
 
+module.exports.getBook = function (id, callback,limit) {
+	Book.findById(id,callback).limit(limit);
+}
 
 
